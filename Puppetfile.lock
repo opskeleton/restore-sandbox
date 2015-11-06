@@ -1,0 +1,71 @@
+FORGE
+  remote: https://forgeapi.puppetlabs.com
+  specs:
+    puppetlabs-stdlib (4.9.0)
+    rodjek-logrotate (1.1.1)
+    stahnma-epel (1.1.1)
+    stankevich-python (1.9.8)
+      puppetlabs-stdlib (< 6.0.0, >= 4.6.0)
+      stahnma-epel (< 2.0.0, >= 1.0.1)
+
+GIT
+  remote: git://github.com/pulling-strings/puppet-archive.git
+  ref: master
+  sha: 3f4250dbc2b977845643e98ad24f427c24c845b1
+  specs:
+    strings-archive (0.2.0)
+
+GIT
+  remote: git://github.com/pulling-strings/puppet-backup.git
+  ref: master
+  sha: 25c8df512b75326848f3c61dec32ad7441a03c90
+  specs:
+    strings-backup (0.1.1)
+      rodjek-logrotate (>= 1.1.1)
+
+GIT
+  remote: git://github.com/pulling-strings/puppet-downloadfile.git
+  ref: master
+  sha: d15eff627fc8051e58950b6b961f5157ecf4c8ca
+  specs:
+    strings-downloadfile (0.0.1)
+
+GIT
+  remote: git://github.com/pulling-strings/puppet-git.git
+  ref: master
+  sha: 5287b58d3bfcdf740e0eed9409410accd9c20c44
+  specs:
+    strings-git (0.0.1)
+
+GIT
+  remote: git://github.com/pulling-strings/puppet-mkfs.git
+  ref: master
+  sha: 77658ed437b8b949aa138c735998ef46f3bb1d32
+  specs:
+    strings-mkfs (0.1.0)
+
+GIT
+  remote: git://github.com/pulling-strings/puppet-shell.git
+  ref: master
+  sha: a4a9fea286138fb40b132e8a5838fad70e77f37a
+  specs:
+    strings-shell (0.2.0)
+      stankevich-python (>= 1.7.8)
+
+GIT
+  remote: git://github.com/ripienaar/puppet-module-data.git
+  ref: master
+  sha: 324e79829b29734bd711a991baadb27ae5331642
+  specs:
+    rip-module-data (0.4.0)
+
+DEPENDENCIES
+  puppetlabs-stdlib (>= 0)
+  rip-module-data (>= 0)
+  strings-archive (>= 0)
+  strings-backup (>= 0)
+  strings-downloadfile (>= 0)
+  strings-git (>= 0)
+  strings-mkfs (>= 0)
+  strings-shell (>= 0)
+
