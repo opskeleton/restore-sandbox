@@ -8,7 +8,7 @@ class restore {
     ensure  => directory
   } ->
 
-  mkfs::device {'/dev/xvdb':
+  mkfs::device {'/dev/xvdh':
     dest   => '/data'
   }
 
