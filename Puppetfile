@@ -22,3 +22,8 @@ mod 'strings/mkfs',
 
 mod 'rip/module-data',
   :git => 'git://github.com/ripienaar/puppet-module-data.git'
+
+mod 'strings/barbecue',
+  :git => 'git://github.com/pulling-strings/puppet-barbecue.git'
+
+

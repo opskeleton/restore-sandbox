@@ -1,5 +1,7 @@
 node default {
 
+  include apt
+
   class{'backup::rclone':}
   
   class{'backup::zbackup':}

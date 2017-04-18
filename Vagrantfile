@@ -7,7 +7,7 @@ Vagrant.configure("2") do |config|
   config.vm.define :restore do |node|
 
     env  = ENV['PUPPET_ENV'] || 'dev'
-    node.vm.box = 'ubuntu-16.04.1_puppet-3.8.7'
+    node.vm.box = 'ubuntu-16.04_puppet-3.8.7'
     node.vm.hostname = 'restore.local'
 
     node.vm.provider :libvirt do |domain, o|
