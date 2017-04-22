@@ -11,19 +11,19 @@ Vagrant.configure("2") do |config|
     node.vm.hostname = 'restore.local'
 
     node.vm.provider :libvirt do |domain, o|
-	domain.uri = 'qemu+unix:///system'
-	domain.host = "restore.local"
-	domain.memory = 2048
-	domain.cpus = 2
-	domain.storage :file, :size => '50G', :path => 'restore.qcow2'
-	o.vm.synced_folder './', '/vagrant', type: 'nfs'
+      domain.uri = 'qemu+unix:///system'
+      domain.host = "restore.local"
+      domain.memory = 2048
+      domain.cpus = 2
+      domain.storage :file, :size => '50G', :path => 'restore.qcow2'
+      o.vm.synced_folder './', '/vagrant', type: 'nfs'
     end
 
     node.vm.provision :puppet do |puppet|
-         puppet.manifests_path = 'manifests'
-	   puppet.manifest_file  = 'default.pp'
-         puppet.options = "--modulepath=/vagrant/modules:/vagrant/static-modules --hiera_config /vagrant/hiera_vagrant.yaml --environment=#{env} "
-     end
+      puppet.manifests_path = 'manifests'
+      puppet.manifest_file  = 'default.pp'
+      puppet.options = "--modulepath=/vagrant/modules:/vagrant/static-modules --hiera_config /vagrant/hiera_vagrant.yaml --environment=#{env} "
+    end
   end
 
 end
