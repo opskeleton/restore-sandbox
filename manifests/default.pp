@@ -1,4 +1,5 @@
 node default {
+  $device = hiera('restore::device')
 
   include apt
 
@@ -10,7 +11,7 @@ node default {
     ensure  => directory
   } ->
 
-  mkfs::device {'/dev/vda':
+  mkfs::device { $device:
     dest   => '/data'
   }
 }
