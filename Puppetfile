@@ -2,22 +2,24 @@ forge 'https://forgeapi.puppetlabs.com'
 
 mod 'puppetlabs/stdlib'
 
+mod 'puppetlabs/apt', '2.4.0'
+
 mod 'strings/backup',
   :git => 'git://github.com/pulling-strings/puppet-backup.git'
 
-mod 'strings/shell', 
+mod 'strings/shell',
   :git => 'git://github.com/pulling-strings/puppet-shell.git'
 
-mod 'strings/git', 
+mod 'strings/git',
   :git => 'git://github.com/pulling-strings/puppet-git.git'
 
-mod 'strings/archive', 
+mod 'strings/archive',
   :git => 'git://github.com/pulling-strings/puppet-archive.git'
 
-mod 'strings/downloadfile', 
+mod 'strings/downloadfile',
   :git => 'git://github.com/pulling-strings/puppet-downloadfile.git'
 
-mod 'strings/mkfs', 
+mod 'strings/mkfs',
   :git => 'git://github.com/pulling-strings/puppet-mkfs.git'
 
 mod 'rip/module-data',
