@@ -7,8 +7,11 @@ node default {
   
   class{'backup::zbackup':}
 
+  $user = hiera('user')
+
   file{'/data':
-    ensure  => directory
+    ensure => directory,
+    owner  => $user
   } ->
 
   mkfs::device { $device:

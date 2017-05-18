@@ -1,2 +1,3 @@
 ---
 restore::device: '/dev/xvdn'
+user: 'ubuntu'
